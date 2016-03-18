@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="942" y="1523"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant View Controller-->
         <scene sceneID="rCd-dw-OsB">
             <objects>
-                <viewController id="xAA-Bt-x5N" sceneMemberID="viewController">
+                <viewController id="xAA-Bt-x5N" customClass="RestaurantViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JC4-3J-oaM"/>
                         <viewControllerLayoutGuide type="bottom" id="SA0-dp-ZsW"/>
@@ -160,10 +160,10 @@
             </objects>
             <point key="canvasLocation" x="1677" y="1523"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="iBT-s7-csx">
             <objects>
-                <viewController id="MLa-Df-aTD" sceneMemberID="viewController">
+                <viewController id="MLa-Df-aTD" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zyr-93-aeQ"/>
                         <viewControllerLayoutGuide type="bottom" id="7WS-xG-MUH"/>
