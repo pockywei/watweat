@@ -16,11 +16,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xhM-0z-xuP">
+                                <rect key="frame" x="240" y="241" width="121" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="Qas-ig-K2b"/>
+                                    <constraint firstAttribute="height" constant="28" id="hua-J0-C3J"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Eater"/>
+                                    <segment title="Owner"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-I3-DCU">
+                                <rect key="frame" x="240" y="277" width="121" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PYr-6w-Mmt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AwF-MC-p2G">
+                                <rect key="frame" x="258" y="402" width="84" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="9NP-ZB-Ujn"/>
+                                </constraints>
+                                <state key="normal" title="OK" backgroundImage="test.png">
+                                    <color key="titleColor" red="0.94509803920000002" green="0.72941176470000002" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95973085729999996" green="0.77169919310000001" blue="0.32414916589999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xhM-0z-xuP" firstAttribute="trailing" secondItem="bXe-I3-DCU" secondAttribute="trailing" id="6Bp-XI-41s"/>
+                            <constraint firstItem="AwF-MC-p2G" firstAttribute="top" secondItem="bXe-I3-DCU" secondAttribute="bottom" constant="95" id="BcF-jw-yWE"/>
+                            <constraint firstItem="xhM-0z-xuP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DdO-hM-wvh"/>
+                            <constraint firstItem="AwF-MC-p2G" firstAttribute="centerX" secondItem="bXe-I3-DCU" secondAttribute="centerX" id="TuY-Ze-RmR"/>
+                            <constraint firstItem="xhM-0z-xuP" firstAttribute="leading" secondItem="bXe-I3-DCU" secondAttribute="leading" id="USh-Lc-P5L"/>
+                            <constraint firstItem="bXe-I3-DCU" firstAttribute="top" secondItem="xhM-0z-xuP" secondAttribute="bottom" constant="8" symbolic="YES" id="cOz-of-GST"/>
+                            <constraint firstItem="xhM-0z-xuP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="221" id="til-m9-xZc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AwF-MC-p2G" secondAttribute="bottom" constant="167" id="uyv-41-0qc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="ekS-37-Aan" kind="custom" id="Z86-mP-ZsQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="epc-ha-tlN">
+            <objects>
+                <navigationController id="ekS-37-Aan" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f7Q-Kl-ZYd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MLa-Df-aTD" kind="show" id="3nd-oS-bo0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7a5-H3-e3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1062" y="429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iBT-s7-csx">
+            <objects>
+                <viewController id="MLa-Df-aTD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zyr-93-aeQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="7WS-xG-MUH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DVJ-b4-6wX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jQv-iu-hJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="test.png" width="320" height="160"/>
+    </resources>
 </document>

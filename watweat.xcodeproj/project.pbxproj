@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3800F151C9C3C650047A85E /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = B3800F141C9C3C650047A85E /* test.png */; };
 		B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FA1C9C1D57003001DC /* AppDelegate.swift */; };
 		B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FC1C9C1D57003001DC /* ViewController.swift */; };
 		B61A76001C9C1D57003001DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61A75FE1C9C1D57003001DC /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3800F141C9C3C650047A85E /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = test.png; path = ../../../../Desktop/test.png; sourceTree = "<group>"; };
 		B61A75F71C9C1D57003001DC /* watweat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watweat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61A75FA1C9C1D57003001DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61A75FC1C9C1D57003001DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		B61A75F91C9C1D57003001DC /* watweat */ = {
 			isa = PBXGroup;
 			children = (
+				B3800F141C9C3C650047A85E /* test.png */,
 				B61A75FA1C9C1D57003001DC /* AppDelegate.swift */,
 				B61A75FC1C9C1D57003001DC /* ViewController.swift */,
 				B61A75FE1C9C1D57003001DC /* Main.storyboard */,
@@ -238,6 +241,7 @@
 				B61A76081C9C1D57003001DC /* LaunchScreen.storyboard in Resources */,
 				B61A76051C9C1D57003001DC /* Assets.xcassets in Resources */,
 				B61A76001C9C1D57003001DC /* Main.storyboard in Resources */,
+				B3800F151C9C3C650047A85E /* test.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = watweat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.watweat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = watweat/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = au.edu.uow.watweat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -489,6 +495,7 @@
 				B61A76241C9C1D57003001DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B61A76251C9C1D57003001DC /* Build configuration list for PBXNativeTarget "watweatTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +504,7 @@
 				B61A76271C9C1D57003001DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B61A76281C9C1D57003001DC /* Build configuration list for PBXNativeTarget "watweatUITests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +513,7 @@
 				B61A762A1C9C1D57003001DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
