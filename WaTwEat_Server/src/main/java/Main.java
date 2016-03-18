@@ -12,24 +12,21 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Gson gson = new Gson();
+        //Gson gson = new Gson();
         Log.setLogLevel(Log.DEBUG);
-        Log.logInfo(Main.class,"Test Debugging Log");
+        Log.logInfo(Main.class, "Test Debugging Log");
+        Controller controller = new Controller();
 
-        post("/client_json", "application/json", (request, response) ->
-        {
-            System.out.println("in here => " + request.body());
-            return request.body();
-        });
+        controller.startServer();
 
 
 
-        get("/hello", (request, response) -> new TestInfor(),gson::toJson);
 
 
 
 
         //testing pushing
+        /*
         String url = "https://maps.googleapis.com/maps/api/geocode/json";
         HttpResponse<JsonNode> jsonResponse;
         try {
@@ -40,6 +37,6 @@ public class Main
             System.out.println(jsonResponse.getBody().getObject().getJSONArray("results"));
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
