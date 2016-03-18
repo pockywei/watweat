@@ -18,17 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Y-lE-VEz">
-                                <rect key="frame" x="0.0" y="437" width="320" height="57"/>
-                                <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="31"/>
-                                <state key="normal" title="OK">
-                                    <color key="titleColor" red="0.94901960780000005" green="0.89019607840000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xhM-0z-xuP">
-                                <rect key="frame" x="74" y="273" width="165" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xhM-0z-xuP">
+                                <rect key="frame" x="74" y="233" width="173" height="29"/>
                                 <animations/>
                                 <segments>
                                     <segment title="Eater"/>
@@ -36,21 +27,44 @@
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-I3-DCU">
-                                <rect key="frame" x="74" y="330" width="165" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-I3-DCU">
+                                <rect key="frame" x="74" y="290" width="173" height="30"/>
                                 <animations/>
                                 <color key="textColor" red="0.89777762062051281" green="0.84349298997359834" blue="0.39430570378542701" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9Y-lE-VEz">
+                                <rect key="frame" x="0.0" y="415" width="320" height="57"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PingFangSC-Medium" family="PingFang SC" pointSize="31"/>
+                                <state key="normal" title="OK">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.89019607840000003" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhatwEat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn6-Bf-bRb">
+                                <rect key="frame" x="91" y="100" width="147" height="59"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.95973085729999996" green="0.90667994115313477" blue="0.48572970496018847" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="xhM-0z-xuP" secondAttribute="trailing" constant="57" id="7BA-jy-HRg"/>
+                            <constraint firstItem="xhM-0z-xuP" firstAttribute="top" secondItem="fn6-Bf-bRb" secondAttribute="bottom" constant="74" id="Fcl-GV-9L3"/>
                             <constraint firstItem="xhM-0z-xuP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="MQZ-Ez-Ke7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bXe-I3-DCU" secondAttribute="trailing" constant="57" id="Nyx-Bh-MxS"/>
+                            <constraint firstItem="fn6-Bf-bRb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="RAB-Vd-zFi"/>
+                            <constraint firstItem="bXe-I3-DCU" firstAttribute="top" secondItem="xhM-0z-xuP" secondAttribute="bottom" constant="29" id="XUP-6Z-3rn"/>
+                            <constraint firstItem="fn6-Bf-bRb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="k1R-qy-CvT"/>
                             <constraint firstItem="bXe-I3-DCU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="rlg-Q9-xBx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fn6-Bf-bRb" secondAttribute="trailing" constant="66" id="yGC-dR-Uli"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
