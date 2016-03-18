@@ -59,9 +59,6 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AwF-MC-p2G" secondAttribute="bottom" constant="167" id="uyv-41-0qc"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <segue destination="ekS-37-Aan" kind="custom" id="Z86-mP-ZsQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
