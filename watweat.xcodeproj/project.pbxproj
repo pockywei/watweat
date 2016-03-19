@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3800F171C9CA41F0047A85E /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B3800F161C9CA41F0047A85E /* assets */; };
+		B60328781C9D2409003CEA14 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328771C9D2409003CEA14 /* ChatListCell.swift */; };
 		B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FA1C9C1D57003001DC /* AppDelegate.swift */; };
 		B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FC1C9C1D57003001DC /* ViewController.swift */; };
 		B61A76001C9C1D57003001DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61A75FE1C9C1D57003001DC /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		B61A762E1C9CAF93003001DC /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */; };
 		B61A76301C9CB08C003001DC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A762F1C9CB08C003001DC /* Restaurant.swift */; };
 		B61A76321C9CC742003001DC /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A76311C9CC742003001DC /* ArtWork.swift */; };
-		B61A76341C9CD0FF003001DC /* ResMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A76331C9CD0FF003001DC /* ResMapViewController.swift */; };
+		B61A76341C9CD0FF003001DC /* ResdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		B3800F161C9CA41F0047A85E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		B60328771C9D2409003CEA14 /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
 		B61A75F71C9C1D57003001DC /* watweat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watweat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61A75FA1C9C1D57003001DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61A75FC1C9C1D57003001DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		B61A762F1C9CB08C003001DC /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B61A76311C9CC742003001DC /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
-		B61A76331C9CD0FF003001DC /* ResMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResMapViewController.swift; sourceTree = "<group>"; };
+		B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResdetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +122,8 @@
 				B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */,
 				B61A762F1C9CB08C003001DC /* Restaurant.swift */,
 				B61A76311C9CC742003001DC /* ArtWork.swift */,
-				B61A76331C9CD0FF003001DC /* ResMapViewController.swift */,
+				B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */,
+				B60328771C9D2409003CEA14 /* ChatListCell.swift */,
 			);
 			path = watweat;
 			sourceTree = "<group>";
@@ -279,7 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */,
-				B61A76341C9CD0FF003001DC /* ResMapViewController.swift in Sources */,
+				B60328781C9D2409003CEA14 /* ChatListCell.swift in Sources */,
+				B61A76341C9CD0FF003001DC /* ResdetailViewController.swift in Sources */,
 				B61A762E1C9CAF93003001DC /* RestaurantViewController.swift in Sources */,
 				B61A76301C9CB08C003001DC /* Restaurant.swift in Sources */,
 				B61A76321C9CC742003001DC /* ArtWork.swift in Sources */,

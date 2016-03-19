@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class ResMapViewController:UIViewController{
+class ResdetailViewController:UIViewController{
 	
 	
 	@IBOutlet weak var resMap: MKMapView!

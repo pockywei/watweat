@@ -47,7 +47,7 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 		super.viewDidLoad()
 		centerMapOnLocation(initialLocation)
 		let artwork = Artwork(title: "Your match location",locationName: ("Restaurant"),
-			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-37.8132)), longitude: Double((144.963))))
+			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-37.8132)), longitude: Double((144.963))),phoneN: 0405558104)
 		
 		resMap.addAnnotation(artwork)
 		
