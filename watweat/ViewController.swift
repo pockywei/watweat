@@ -15,9 +15,11 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
         
         let client = Client()
-        var url = NSURL(string:"http://10.0.7.25:4567/restaurant_chat")
+        //client.sendMessage("hello!", restaurant_id: 1)
+        client.unread_message_request(1)
+        /*var url = NSURL(string:"http://10.0.7.25:4567/restaurant_chat")
         var parameters : [String:AnyObject]?
-        parameters = ["alias":client.alias, "id":client.id, "idRestaurant":1]
+        parameters = ["alias":client.alias, "idRestaurant":1]
         if parameters==nil{
             parameters = ["":NSNull()]
         }
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
         {
             
             print("NO PARAMETER")
-        }
+        }*/
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
