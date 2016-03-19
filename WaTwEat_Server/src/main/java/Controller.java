@@ -4,8 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Objects;
 
 import static spark.Spark.get;
 import static spark.Spark.post;
@@ -15,6 +13,9 @@ import static spark.Spark.post;
  */
 public class Controller
 {
+    final static String SUCCESS="success";
+    final static String FAIL="fail";
+
     Gson gson = new Gson();
     String dbSchema="mydb";
     String dbPORT="3306";
@@ -24,6 +25,7 @@ public class Controller
     String dbPassword="root";
     Connection con ;
     Statement st;
+    Statement st2;
 
     public Object processingData(String sql,DataProcessor dataProcessor)
     {
@@ -65,27 +67,28 @@ public class Controller
 
     public void startRegisterMsg()
     {
-        get("/restaurant_chat_send/:user_id/:restaurant_id/:message", (request, response) ->
+        post("/restaurant_chat_send", (request, response) ->
         {
             String completeSQL;
             int last_id;
-            int idUser = Integer.parseInt(request.params("user_id"));
-            int idRestaurant = Integer.parseInt(request.params("restaurant_id"));
+            int idUser = Integer.parseInt(request.queryParams("idUser"));
+            int idRestaurant = Integer.parseInt(request.queryParams("idRestaurant"));
             int idGroupChat;
-            String content = request.params("message");
+            String content = request.queryParams("message");
+            String alias = request.queryParams("alias");
             ResultSet rs;
-            Log.logInfo(Controller.class, "start get message, id => "+idUser+", rest id =>"+idRestaurant+" ,content => "+content);
-
-            try
-            {
-                completeSQL = String.format(SqlQuery.SQL_GET_GROUP_ID,idRestaurant);
-                Log.logInfo(Controller.class, "idGroupChat query => "+completeSQL);
+            Log.logInfo(Controller.class, "start get message, id => " + idUser + ", rest id =>" + idRestaurant + " ,content => " + content);
+            int send_time;
+            try {
+                completeSQL = String.format(SqlQuery.SQL_GET_GROUP_ID, idRestaurant);
+                Log.logInfo(Controller.class, "idGroupChat query => " + completeSQL);
                 rs = st.executeQuery(completeSQL);
                 rs.next();
                 idGroupChat = rs.getInt("idGroupChat");
 
 
-                completeSQL = String.format(SqlQuery.SQL_INSERT_MESSAGE, idRestaurant, content, (int) (System.currentTimeMillis() / 1000), idUser);
+                send_time = (int) (System.currentTimeMillis() / 1000);
+                completeSQL = String.format(SqlQuery.SQL_INSERT_MESSAGE, idRestaurant, content, send_time, idUser);
                 Log.logInfo(Controller.class, "insert into Message query => " + completeSQL);
                 st.executeUpdate(completeSQL);
                 //con.commit();
@@ -97,34 +100,31 @@ public class Controller
                 last_id = rs.getInt("last_id");
 
                 //result set get closed after last id
-                st=con.createStatement();
+                st = con.createStatement();
 
-                Log.logInfo(Controller.class, "last idMessage => "+last_id);
+                Log.logInfo(Controller.class, "last idMessage => " + last_id);
 
-                completeSQL = String.format(SqlQuery.SQL_GROUP_USERS_MSG_REGISTER,idGroupChat);
-                Log.logInfo(Controller.class, "debug :"+completeSQL);
-                Log.logInfo(Controller.class, "idUserGroupChat query => "+completeSQL);
+                completeSQL = String.format(SqlQuery.SQL_GROUP_USERS_MSG_REGISTER, idGroupChat);
+                Log.logInfo(Controller.class, "debug :" + completeSQL);
+                Log.logInfo(Controller.class, "idUserGroupChat query => " + completeSQL);
 
 
                 rs = st.executeQuery(completeSQL);
-                st=con.createStatement();
-                while(rs.next())
-                {
-                    completeSQL = String.format(SqlQuery.SQL_INSERT_USER_MESSAGE,last_id,rs.getInt("idUserGroupChat"),"FALSE");
-                    Log.logInfo(Controller.class, "inserting UserMessage  => "+completeSQL);
+                st = con.createStatement();
+                while (rs.next()) {
+                    completeSQL = String.format(SqlQuery.SQL_INSERT_USER_MESSAGE, last_id, rs.getInt("idUserGroupChat"), "FALSE");
+                    Log.logInfo(Controller.class, "inserting UserMessage  => " + completeSQL);
                     st.executeUpdate(completeSQL);
                 }
                 //con.commit();
+            } catch (Exception e) {
+                Log.logInfo(Controller.class, "processing messge registration query failed " + e.getMessage());
+                return new JsonData(FAIL);
             }
-            catch(Exception e)
-            {
-                Log.logInfo(Controller.class, "processing messge registration query failed "+e.getMessage());
-                return null;
-            }
-
-
-            return new TestInfor();
-        },gson::toJson);
+            JsonData jsonData = new JsonData();
+            jsonData.array.add(new Message(alias,content,send_time));
+            return jsonData;
+        }, gson::toJson);
     }
 
     public void startRestaurantChatMessage() {
@@ -137,33 +137,41 @@ public class Controller
             int idUserGroupChat;
             String completeSQL;
             ResultSet rs;
+            ResultSet rs_temp;
+            JsonData jsonData = new JsonData();
             Log.logInfo(Controller.class, "start get message, id => "+userId+", rest id =>"+restaurantId);
             try
             {
-                JsonData jsonData = new JsonData();
-                completeSQL = String.format(SqlQuery.SQL_GET_GROUP_ID,restaurantId);
+                completeSQL = String.format(SqlQuery.SQL_GET_GROUP_ID, restaurantId);
                 rs = st.executeQuery(completeSQL);
                 rs.next();
                 idGroupChat = rs.getInt("idGroupChat");
                 Log.logInfo(Controller.class, "idGroupChat query => "+completeSQL);
 
 
-                completeSQL = String.format(SqlQuery.SQL_GET_USERS_IN_SAME_GROUP_CHAT, idGroupChat,userId);
+                completeSQL = String.format(SqlQuery.SQL_GET_USERS_IN_SAME_GROUP_CHAT, idGroupChat, userId);
                 rs = st.executeQuery(completeSQL);
                 rs.next();
                 idUserGroupChat = rs.getInt("idUserGroupChat");
 
                 Log.logInfo(Controller.class, "idUserGroupChat query => "+completeSQL);
 
-                completeSQL = String.format(SqlQuery.SQL_GET_ONE_USER_IN_ONE_CHART_ROOM_MSG, idUserGroupChat,"FALSE",idUserGroupChat,"FALSE");
+                completeSQL = String.format(SqlQuery.SQL_GET_ONE_USER_IN_ONE_CHART_ROOM_MSG, idUserGroupChat, "FALSE", idUserGroupChat, "FALSE");
+                Log.logInfo(Controller.class, "messges query => "+completeSQL);
+
                 rs = st.executeQuery(completeSQL);
 
-                Log.logInfo(Controller.class, "messges query => "+completeSQL);
+
 
                 while(rs.next())
                 {
-                    jsonData.array.add(new Message(rs.getInt("idSender"), rs.getString("content"), rs.getInt("time_sent")));
-                };
+                    //Log.logInfo(Controller.class, "hello");
+                    st=con.createStatement();
+                    completeSQL =String.format(SqlQuery.SQL_GET_ALIAS, rs.getInt("idSender"));
+                    Log.logInfo(Controller.class, "alias query => "+completeSQL);
+                    rs_temp = st.executeQuery(completeSQL);
+                    jsonData.array.add(new Message(""+rs.getInt("idSender"), rs.getString("content"), rs.getInt("time_sent")));
+                }
 
                 completeSQL = String.format(SqlQuery.SQL_SET_ONE_USER_MSG_AS_ALREADY_READ, idUserGroupChat);
                 Log.logInfo(Controller.class, "messges update has_read query => " + completeSQL);
@@ -174,8 +182,10 @@ public class Controller
             }
             catch (Exception e)
             {
-                Log.logInfo(Controller.class, "processing message query failed ");
-                return null;
+                Log.logInfo(Controller.class, "processing message query failed "+e.getMessage());
+                jsonData.setStatus("failed");
+                jsonData.setStatus(FAIL);
+                return jsonData;
             }
 
             //return new TestInfor();
@@ -208,7 +218,8 @@ public class Controller
                         } catch (Exception e) {
                             Log.logInfo(Controller.class, "Processing Restaurant Sql Failed => " +e.getMessage());
                         }
-                        return null;
+                        jsonData.setStatus(FAIL);
+                        return jsonData;
                     });
             //return new TestInfor();
         }, gson::toJson);
@@ -228,7 +239,7 @@ public class Controller
         get("/test_get", (request, response) ->
         {
             Log.logInfo(Controller.class, "Test get");
-            return new TestInfor();
+            return new JsonData();
         }, gson::toJson);
     }
 

@@ -7,6 +7,22 @@ import java.util.Objects;
  */
 public class JsonData
 {
-    List<Object> array = new ArrayList<Object>();
+    String status = Controller.SUCCESS;
+    ArrayList<Object> array = new ArrayList<Object>();
+
+    JsonData()
+    {
+    }
+
+    JsonData(String status)
+    {
+        this.status = status;
+    }
+
+    public void setStatus(String status)
+    {
+        this.status = status;
+    }
+
 
 }

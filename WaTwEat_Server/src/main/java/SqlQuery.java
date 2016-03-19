@@ -33,4 +33,6 @@ public class SqlQuery
     public static String SQL_INSERT_USER_MESSAGE = "INSERT INTO UserMessage (Message_idMessage , UserGroupChat_idUserGroupChat , has_read) " +
             "VALUES(%d , %d , %s) ;";
     public static String SQL_LAST_ID = "SELECT LAST_INSERT_ID() as last_id;";
+
+    public static String SQL_GET_ALIAS = "SELECT alias FROM User WHERE idUser = %d;";
 }
