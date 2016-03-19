@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B3800F171C9CA41F0047A85E /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B3800F161C9CA41F0047A85E /* assets */; };
+		B3800F211C9D46820047A85E /* AppName_shadow_noBG.png in Resources */ = {isa = PBXBuildFile; fileRef = B3800F201C9D46820047A85E /* AppName_shadow_noBG.png */; };
 		B60328781C9D2409003CEA14 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328771C9D2409003CEA14 /* ChatListCell.swift */; };
 		B603287A1C9D2990003CEA14 /* ChatRoomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328791C9D2990003CEA14 /* ChatRoomListTableViewController.swift */; };
 		B603287C1C9D2A67003CEA14 /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		B3800F161C9CA41F0047A85E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		B3800F201C9D46820047A85E /* AppName_shadow_noBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppName_shadow_noBG.png; sourceTree = "<group>"; };
 		B60328771C9D2409003CEA14 /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
 		B60328791C9D2990003CEA14 /* ChatRoomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomListTableViewController.swift; sourceTree = "<group>"; };
 		B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		B61A75F91C9C1D57003001DC /* watweat */ = {
 			isa = PBXGroup;
 			children = (
+				B3800F201C9D46820047A85E /* AppName_shadow_noBG.png */,
 				B61A75FA1C9C1D57003001DC /* AppDelegate.swift */,
 				B61A75FC1C9C1D57003001DC /* ViewController.swift */,
 				B61A75FE1C9C1D57003001DC /* Main.storyboard */,
@@ -266,6 +269,7 @@
 				B61A76081C9C1D57003001DC /* LaunchScreen.storyboard in Resources */,
 				B61A76051C9C1D57003001DC /* Assets.xcassets in Resources */,
 				B61A76001C9C1D57003001DC /* Main.storyboard in Resources */,
+				B3800F211C9D46820047A85E /* AppName_shadow_noBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
