@@ -14,13 +14,14 @@ import AddressBook
 class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 	@IBOutlet weak var resMap: MKMapView!
 	
+	
 	var locationManager = CLLocationManager()
 	
 	
 	
 	
 	
-	let annotation = MKPointAnnotation()
+	
 	var myLocation = CLLocation()
 	// set initial location in Honolulu
 	//let initialLocation = CLLocation(latitude: -37.8132, longitude: 144.963)
@@ -47,18 +48,27 @@ class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationMan
 		
 		
 		self.resMap.delegate=self
-		annotation.title="SYD Tower"
-		annotation.subtitle="SYD Tower Buffet!!"
-		annotation.coordinate=CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089)))
+		
+		
+		
+		
 		let artwork = Artwork(title: "SYD Tower",locationName: ("SYD Tower Buffet!!"),
 			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089))),phoneN: 0405558104)
 		
-		let span = MKCoordinateSpanMake(0.003, 0.003)
+		let artwork2 = Artwork(title: "SYD Imax",locationName: ("SYD Imax Ice-cream!!"),
+			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8730)), longitude: Double((151.2030))),phoneN: 0405558104)
+		
+		
+		
+		let span = MKCoordinateSpanMake(0.03, 0.03)
 
-		let region = MKCoordinateRegionMake(annotation.coordinate, span)
+		let region = MKCoordinateRegionMake(artwork.coordinate, span)
 
 		resMap.setRegion(region, animated:true)
-		resMap.addAnnotation(annotation)
+		resMap.addAnnotation(artwork)
+		
+		resMap.addAnnotation(artwork2)
+		
 		
 	
 		
@@ -103,6 +113,9 @@ class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationMan
 		print(__FUNCTION__)
 	}
 	
+	
+	
+	
 	func mapView(resMap: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
 		print("ssssssss")
 		if annotation is MKUserLocation {
@@ -130,8 +143,23 @@ class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationMan
 	
 	func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 		if control == view.rightCalloutAccessoryView {
-			performSegueWithIdentifier("ShowResDetailSegue", sender: view)
+			performSegueWithIdentifier("ShowResDetailSegue", sender: view.annotation)
 		}
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == "ShowResDetailSegue" )
+		{
+			let RestNavi = segue.destinationViewController as! UINavigationController
+			let createRes = RestNavi.topViewController as! ResdetailViewController
+			//print(sender)
+			if let selectedPinRes = sender as? Artwork {
+				createRes.resta = selectedPinRes
+				print(createRes.resta)
+			}
+			
+		}
+		
 	}
 	
 	

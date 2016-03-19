@@ -43,7 +43,8 @@ class ResdetailViewController:UIViewController{
     }
     
     override func viewDidLoad() {
-        self.addressDetail.text = resta?.locationName
-        self.phoneDetail.text = String(resta?.phoneNumber)
+		self.categoryDetail.text = resta!.locationName
+        self.addressDetail.text = resta!.title
+        self.phoneDetail.text = String(resta!.phoneNumber!)
     }
 }

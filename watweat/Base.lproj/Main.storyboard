@@ -83,7 +83,7 @@
         <!--Looking for restaurant-->
         <scene sceneID="i4f-Yo-hcP">
             <objects>
-                <viewController id="sBu-Ve-tm6" customClass="RestaurantViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sBu-Ve-tm6" customClass="RestaurantViewController" customModule="watweat" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7ry-8i-ga3"/>
                         <viewControllerLayoutGuide type="bottom" id="3C5-XC-ta0"/>
@@ -133,7 +133,7 @@
         <!--Restaurant-->
         <scene sceneID="q10-Ff-w4c">
             <objects>
-                <viewController id="sGM-Vy-J2d" customClass="ResdetailViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sGM-Vy-J2d" customClass="ResdetailViewController" customModule="watweat" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BCa-KW-Mqr"/>
                         <viewControllerLayoutGuide type="bottom" id="LaD-OF-AVd"/>
@@ -162,7 +162,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="12 Fake Street,  Fake Suburb, VIC, 1234" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Mn-bA-vdz">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="12 Fake Street,  Fake Suburb, VIC, 1234" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Mn-bA-vdz">
                                 <rect key="frame" x="35" y="179" width="163" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -388,6 +388,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="804-Yr-iN2"/>
-        <segue reference="POw-Bq-lOI"/>
+        <segue reference="OWb-UY-EeJ"/>
     </inferredMetricsTieBreakers>
 </document>

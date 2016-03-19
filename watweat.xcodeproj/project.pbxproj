@@ -22,7 +22,6 @@
 		B61A76131C9C1D57003001DC /* watweatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A76121C9C1D57003001DC /* watweatTests.swift */; };
 		B61A761E1C9C1D57003001DC /* watweatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A761D1C9C1D57003001DC /* watweatUITests.swift */; };
 		B61A762E1C9CAF93003001DC /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */; };
-		B61A76301C9CB08C003001DC /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A762F1C9CB08C003001DC /* Restaurant.swift */; };
 		B61A76321C9CC742003001DC /* ArtWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A76311C9CC742003001DC /* ArtWork.swift */; };
 		B61A76341C9CD0FF003001DC /* ResdetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */; };
 /* End PBXBuildFile section */
@@ -66,7 +65,6 @@
 		B61A761D1C9C1D57003001DC /* watweatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watweatUITests.swift; sourceTree = "<group>"; };
 		B61A761F1C9C1D57003001DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
-		B61A762F1C9CB08C003001DC /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		B61A76311C9CC742003001DC /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
 		B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResdetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,7 +127,6 @@
 				B61A76091C9C1D57003001DC /* Info.plist */,
 				B61A76011C9C1D57003001DC /* watweat.xcdatamodeld */,
 				B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */,
-				B61A762F1C9CB08C003001DC /* Restaurant.swift */,
 				B61A76311C9CC742003001DC /* ArtWork.swift */,
 				B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */,
 				B60328771C9D2409003CEA14 /* ChatListCell.swift */,
@@ -299,7 +296,6 @@
 				B60328781C9D2409003CEA14 /* ChatListCell.swift in Sources */,
 				B61A76341C9CD0FF003001DC /* ResdetailViewController.swift in Sources */,
 				B61A762E1C9CAF93003001DC /* RestaurantViewController.swift in Sources */,
-				B61A76301C9CB08C003001DC /* Restaurant.swift in Sources */,
 				B61A76321C9CC742003001DC /* ArtWork.swift in Sources */,
 				B603287C1C9D2A67003CEA14 /* ChatRoomTableViewController.swift in Sources */,
 				B603287A1C9D2990003CEA14 /* ChatRoomListTableViewController.swift in Sources */,
