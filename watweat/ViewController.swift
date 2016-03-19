@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	let user = User.sharedInstance
+	
 	@IBOutlet weak var OkButton: UIButton!
 	override func viewDidLoad() {
 		super.viewDidLoad()

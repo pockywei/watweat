@@ -13,6 +13,7 @@
 		B603287A1C9D2990003CEA14 /* ChatRoomListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328791C9D2990003CEA14 /* ChatRoomListTableViewController.swift */; };
 		B603287C1C9D2A67003CEA14 /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */; };
 		B603287E1C9D3D1C003CEA14 /* chatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287D1C9D3D1C003CEA14 /* chatRoom.swift */; };
+		B60328801C9DAC60003CEA14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287F1C9DAC60003CEA14 /* User.swift */; };
 		B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FA1C9C1D57003001DC /* AppDelegate.swift */; };
 		B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FC1C9C1D57003001DC /* ViewController.swift */; };
 		B61A76001C9C1D57003001DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61A75FE1C9C1D57003001DC /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		B60328791C9D2990003CEA14 /* ChatRoomListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomListTableViewController.swift; sourceTree = "<group>"; };
 		B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		B603287D1C9D3D1C003CEA14 /* chatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatRoom.swift; sourceTree = "<group>"; };
+		B603287F1C9DAC60003CEA14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B61A75F71C9C1D57003001DC /* watweat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watweat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61A75FA1C9C1D57003001DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61A75FC1C9C1D57003001DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				B60328791C9D2990003CEA14 /* ChatRoomListTableViewController.swift */,
 				B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */,
 				B603287D1C9D3D1C003CEA14 /* chatRoom.swift */,
+				B603287F1C9DAC60003CEA14 /* User.swift */,
 			);
 			path = watweat;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				B603287A1C9D2990003CEA14 /* ChatRoomListTableViewController.swift in Sources */,
 				B61A76031C9C1D57003001DC /* watweat.xcdatamodeld in Sources */,
 				B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */,
+				B60328801C9DAC60003CEA14 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

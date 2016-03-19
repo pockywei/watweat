@@ -34,8 +34,10 @@ class ResdetailViewController:UIViewController{
     @IBOutlet var addressDetail: UITextView!
     @IBOutlet var phoneDetail: UITextView!
 	
-	@IBOutlet weak var resMap: MKMapView!
+	
     @IBAction func considerBtnClick() {
+		
+		//运行regina的send function
     }
 	
     @IBAction func goBtnClick() {
