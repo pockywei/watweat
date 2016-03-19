@@ -96,19 +96,23 @@ public class Controller
                 rs.next();
                 last_id = rs.getInt("last_id");
 
-                //result set get closed after last id 
+                //result set get closed after last id
                 st=con.createStatement();
 
                 Log.logInfo(Controller.class, "last idMessage => "+last_id);
 
                 completeSQL = String.format(SqlQuery.SQL_GROUP_USERS_MSG_REGISTER,idGroupChat);
+                Log.logInfo(Controller.class, "debug :"+completeSQL);
                 Log.logInfo(Controller.class, "idUserGroupChat query => "+completeSQL);
-                st.executeQuery(completeSQL);
+
+
+                rs = st.executeQuery(completeSQL);
+                st=con.createStatement();
                 while(rs.next())
                 {
                     completeSQL = String.format(SqlQuery.SQL_INSERT_USER_MESSAGE,last_id,rs.getInt("idUserGroupChat"),"FALSE");
                     Log.logInfo(Controller.class, "inserting UserMessage  => "+completeSQL);
-                    st.executeQuery(completeSQL);
+                    st.executeUpdate(completeSQL);
                 }
                 //con.commit();
             }

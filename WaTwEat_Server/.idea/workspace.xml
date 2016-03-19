@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4e97d27-a350-47fc-8683-b239c154b630" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/Message.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/Controller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JsonData.java" afterPath="$PROJECT_DIR$/src/main/java/JsonData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/SqlQuery.java" afterPath="$PROJECT_DIR$/src/main/java/SqlQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/TestInfor.java" afterPath="$PROJECT_DIR$/src/main/java/TestInfor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/unitTest.java" afterPath="$PROJECT_DIR$/src/test/java/unitTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="WaTwEatServerREST.iws" />
@@ -87,7 +87,7 @@
     <favorites_list name="WaTwEatServerREST" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6030466">
+    <splitter split-orientation="horizontal" split-proportion="0.8378136">
       <split-first>
         <leaf>
           <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
@@ -107,8 +107,8 @@
           <file leaf-file-name="Controller.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.50933784">
-                  <caret line="98" column="54" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
+                <state vertical-scroll-proportion="1.6711864">
+                  <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -165,7 +165,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/SqlQuery.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="19" column="63" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="63" />
+                  <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -217,8 +217,8 @@
           <file leaf-file-name="SqlQuery.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/SqlQuery.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.7962648">
-                  <caret line="34" column="74" selection-start-line="34" selection-start-column="67" selection-end-line="34" selection-end-column="74" />
+                <state vertical-scroll-proportion="0.3321492">
+                  <caret line="15" column="102" selection-start-line="15" selection-start-column="68" selection-end-line="15" selection-end-column="102" />
                   <folding />
                 </state>
               </provider>
@@ -1269,7 +1269,7 @@
       <option name="number" value="Default" />
       <updated>1458305338981</updated>
       <workItem from="1458305342382" duration="10409000" />
-      <workItem from="1458344370791" duration="26864000" />
+      <workItem from="1458344370791" duration="28092000" />
     </task>
     <task id="LOCAL-00001" summary="java server">
       <created>1458305478553</created>
@@ -1307,11 +1307,17 @@
       <option name="project" value="LOCAL" />
       <updated>1458373197433</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="can find msg now">
+      <created>1458384650137</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1458384650137</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37273000" />
+    <option name="totallyTimeSpent" value="38501000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -1319,13 +1325,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769045" sideWeight="0.46319443" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32769045" sideWeight="0.46041667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25392985" sideWeight="0.25" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25272068" sideWeight="0.25416666" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32889965" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25392985" sideWeight="0.75" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25272068" sideWeight="0.74583334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3309958" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.225" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1360,7 +1366,8 @@
     <MESSAGE value="java server test push" />
     <MESSAGE value="draft api server finished" />
     <MESSAGE value="finding msg now" />
-    <option name="LAST_COMMIT_MESSAGE" value="finding msg now" />
+    <MESSAGE value="can find msg now" />
+    <option name="LAST_COMMIT_MESSAGE" value="can find msg now" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1701,15 +1708,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/SqlQuery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="63" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="63" />
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.50933784">
-          <caret line="98" column="54" selection-start-line="98" selection-start-column="54" selection-end-line="98" selection-end-column="54" />
+        <state vertical-scroll-proportion="1.6711864">
+          <caret line="131" column="9" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
