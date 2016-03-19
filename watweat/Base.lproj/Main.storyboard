@@ -74,12 +74,45 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="MLa-Df-aTD" kind="relationship" relationship="rootViewController" id="f0J-7s-s7C"/>
+                        <segue destination="sBu-Ve-tm6" kind="relationship" relationship="rootViewController" id="yPM-hp-FDC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a5-H3-e3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="429"/>
+        </scene>
+        <!--Restaurant View Controller-->
+        <scene sceneID="i4f-Yo-hcP">
+            <objects>
+                <viewController id="sBu-Ve-tm6" customClass="RestaurantViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ry-8i-ga3"/>
+                        <viewControllerLayoutGuide type="bottom" id="3C5-XC-ta0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="esH-bp-ayd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-3R-qA2">
+                                <rect key="frame" x="0.0" y="182" width="600" height="418"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amt-Wj-gv1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a30-UY-zqq">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="wg8-3d-DVA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="resMap" destination="0cl-3R-qA2" id="nhU-dC-I6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu2-za-UfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="407"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EfS-G6-OPZ">

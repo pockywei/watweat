@@ -8,7 +8,16 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class RestaurantViewController: UIViewController {
+	
+	
+	let locationManager = CLLocationManager()
+	var annotation: MKPointAnnotation?
+	var myLocation = CLLocation()
+	
+	@IBOutlet weak var resMap: MKMapView!
+	
 	
 }
