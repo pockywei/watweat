@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$//WaTwEatServerREST.iml" filepath="$PROJECT_DIR$//WaTwEatServerREST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WaTwEatServerREST.iml" filepath="$PROJECT_DIR$/WaTwEatServerREST.iml" />
     </modules>
   </component>
 </project>
