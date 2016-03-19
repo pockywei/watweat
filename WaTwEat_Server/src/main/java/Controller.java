@@ -18,7 +18,7 @@ public class Controller
     final static String FAIL="fail";
 
     Gson gson = new Gson();
-    String dbSchema="mydb";
+    String dbSchema="mydb2";
     String dbPORT="3306";
     String dbAddr="localhost";
     String dbURL ="jdbc:mysql://"+dbAddr+":"+dbPORT+"/"+dbSchema+"?autoReconnect=true&useSSL=false";
@@ -30,7 +30,6 @@ public class Controller
 
     public Object processingData(String sql,DataProcessor dataProcessor)
     {
-
         try
         {
             //st = con.createStatement();
@@ -64,6 +63,81 @@ public class Controller
         startRestaurantDetailGetByName();
         startRestaurantChatMessage();
         startRegisterMsg();
+        startRegisterGroupChat();
+    }
+
+    public void startRegisterGroupChat()
+    {
+        //'G' -> going, inc num_going  , 'C' -> considering  ,inc num_considering
+        get("/restaurant_go/:idRestaurant/:alias/:idUser/:going_considering",(request,response)->
+        {
+            JsonData jsonData = new JsonData();
+            st = con.createStatement();
+            ResultSet rs;
+            int idGroupChat;
+            int idRestaurant = Integer.parseInt(request.params("idRestaurant"));
+            String alias = request.params("alias");
+            int idUser = Integer.parseInt(request.params("idUser"));
+            String going_considering = request.params("going_considering");
+            String completeSQL;
+            Log.logInfo(Controller.class, "start update go considering and make group chat, idRestaurant => " + idRestaurant + ", alias =>" + alias + ", idUser" + idUser + " ,going_considering => " + going_considering);
+            try
+            {
+                if(going_considering.equals("C"))
+                {
+                    completeSQL = String.format(SqlQuery.SQL_INC_CONSIDERING, idRestaurant);
+
+                    Log.logInfo(Controller.class, "update considering query => " + completeSQL);
+
+                    st.executeUpdate(completeSQL);
+
+
+                }
+                if(going_considering.equals("G"))
+                {
+                    completeSQL = String.format(SqlQuery.SQL_INC_GOING, idRestaurant);
+
+                    Log.logInfo(Controller.class, "update going query => " + completeSQL);
+
+                    st.executeUpdate(completeSQL);
+
+                }
+
+                completeSQL = String.format(SqlQuery.SQL_GET_GROUP_ID, idRestaurant);
+                Log.logInfo(Controller.class, "idGroupChat query => " + completeSQL);
+                rs = st.executeQuery(completeSQL);
+                rs.next();
+                idGroupChat = rs.getInt("idGroupChat");
+
+                completeSQL = String.format(SqlQuery.SQL_INSERT_EATER_RESTAURANT, idUser, idRestaurant, "FALSE", going_considering);
+                Log.logInfo(Controller.class, "insert eater restaurant query => " + completeSQL);
+                st.executeUpdate(completeSQL);
+
+
+                completeSQL = String.format(SqlQuery.SQL_EXIST_IN_USER_GROUP_CHAT, idGroupChat,idUser);
+                Log.logInfo(Controller.class, "find user in user group chat query => " + completeSQL);
+                rs = st.executeQuery(completeSQL);
+                //if no rows matched rs.next() will be false ;
+                if (!rs.next())
+                {
+
+                    completeSQL = String.format(SqlQuery.SQL_INSERT_USER_GROUP_CHAT, idGroupChat,idUser);
+                    Log.logInfo(Controller.class, "insert user in user group chat query => " + completeSQL);
+                    st.executeUpdate(completeSQL);
+                };
+
+            }
+            catch(Exception e)
+            {
+                Log.logInfo(Controller.class, "processing restaurant chat group and num of going query failed " + e.getMessage());
+                jsonData.setStatus(FAIL);
+                return jsonData;
+            }
+
+            return jsonData;
+
+        },gson::toJson);
+
     }
 
     public void startRegisterMsg()
@@ -72,6 +146,7 @@ public class Controller
         post("/restaurant_chat_send", "application/json", (request, response) ->
         {
             JsonData jsonData = new JsonData();
+            st = con.createStatement();
             String completeSQL;
             int last_id;
             int idUser = Integer.parseInt(request.queryParams("idUser"));
@@ -131,11 +206,13 @@ public class Controller
     }
 
     public void startRestaurantChatMessage() {
-        post("/restaurant_chat/:user_id/:restaurant_id", "application/json", (request, response) ->
+        //get("/restaurant_chat/:user_id/:restaurant_id", (request, response) ->
+        get("/restaurant_chat", (request, response) ->
         {
             //Log.logInfo(Controller.class, "Get restauant name query => " + completeSQL);
-            int restaurantId = Integer.parseInt(request.params("restaurant_id"));
-            int userId = Integer.parseInt(request.params("user_id"));
+            st = con.createStatement();
+            int restaurantId = Integer.parseInt(request.queryParams("idRestaurant"));
+            int userId = Integer.parseInt(request.queryParams("idUser"));
             int idGroupChat;
             int idUserGroupChat;
             String completeSQL;
@@ -195,6 +272,7 @@ public class Controller
         get("/restaurant/:r_name", (request, response) ->
         {
             //String completeSQL=SqlQuery.SQL_GET_RESTAUANT_DETAIL_BY_NAME  + "'" + request.params("r_name")+"'"+";";
+            st = con.createStatement();
             String completeSQL = String.format(SqlQuery.SQL_GET_RESTARUANT_DETAIL_BY_NAME, request.params("r_name"));
             Log.logInfo(Controller.class, "Get restauant name query => " + completeSQL);
             return processingData(completeSQL,
@@ -263,7 +341,7 @@ public class Controller
             Log.logInfo(Controller.class, " db Connection Successful=> " + dbURL);
             while(rs.next())
             {
-                System.out.println("" + rs.getString("Tables_in_mydb"));
+                System.out.println("" + rs.getString("Tables_in_mydb2"));
             }
 
             return true;

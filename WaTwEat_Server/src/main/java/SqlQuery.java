@@ -35,4 +35,14 @@ public class SqlQuery
     public static String SQL_LAST_ID = "SELECT LAST_INSERT_ID() as last_id;";
 
     public static String SQL_GET_ALIAS = "SELECT alias FROM User WHERE idUser = %d;";
+
+
+    // increase restaruant go /considering number , put in same group chat
+
+    public static String SQL_INC_GOING = "UPDATE Restaurant SET num_going = num_going + 1  WHERE idRestaurant = %d ;";
+    public static String SQL_INC_CONSIDERING = "UPDATE Restaurant SET num_considering = num_considering + 1  WHERE idRestaurant = %d ;";
+    public static String SQL_EXIST_IN_USER_GROUP_CHAT ="SELECT * FROM UserGroupChat WHERE GroupChat_idGroupChat = %d and User_idUser = %d;";
+    public static String SQL_INSERT_USER_GROUP_CHAT ="INSERT INTO UserGroupChat (GroupChat_idGroupChat , User_idUser) VALUES (%d , %d);";
+    public static String SQL_INSERT_EATER_RESTAURANT = "INSERT INTO EaterRestaurant (Eater_user_idUser , Restaurant_idRestaurant , been_to , going_considering) " +
+            "VALUES (%d , %d , %s , '%s') ;";
 }

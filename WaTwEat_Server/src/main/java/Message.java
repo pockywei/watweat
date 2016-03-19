@@ -4,13 +4,13 @@
 public class Message
 {
     String sender_alias;
-    String content;
+    String message;
     int time_sent;
 
-    public Message(String sender_alias, String content,int time_sent) {
+    public Message(String sender_alias, String message,int time_sent) {
 
         this.sender_alias = sender_alias;
-        this.content = content;
+        this.message = message;
         this.time_sent = time_sent;
     }
 }
