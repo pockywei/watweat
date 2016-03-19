@@ -210,6 +210,9 @@
                     <navigationItem key="navigationItem" title="Restaurant" id="f7d-Qs-0Qf" customClass="RestaurantViewContrller">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Vux-oS-0yl">
                             <color key="tintColor" red="0.84142746040000005" green="0.67055978679999995" blue="0.27115294150000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButton:" destination="sGM-Vy-J2d" id="gTH-TO-cbW"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Chat" id="ws1-oM-7r1">
                             <color key="tintColor" red="0.84142746040000005" green="0.67055978679999995" blue="0.27115294150000002" alpha="1" colorSpace="calibratedRGB"/>

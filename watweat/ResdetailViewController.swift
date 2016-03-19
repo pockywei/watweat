@@ -12,6 +12,22 @@ import MapKit
 
 class ResdetailViewController:UIViewController{
     
+	@IBAction func backButton(sender: AnyObject) {
+		let isPresentingInAddMealMode = presentingViewController is UINavigationController
+		print("4")
+		if isPresentingInAddMealMode {
+			print("5")
+			dismissViewControllerAnimated(true, completion: nil)
+			
+		} else {
+			navigationController!.popViewControllerAnimated(true)
+			print("6")
+			
+			
+		}
+		
+	}
+	
     var resta: Artwork?
 	
     @IBOutlet var categoryDetail: UITextView!
@@ -23,6 +39,7 @@ class ResdetailViewController:UIViewController{
     }
 	
     @IBAction func goBtnClick() {
+		
     }
     
     override func viewDidLoad() {

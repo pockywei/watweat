@@ -11,7 +11,7 @@ import UIKit
 import MapKit
 import AddressBook
 
-class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
+class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 	@IBOutlet weak var resMap: MKMapView!
 	
 	var locationManager = CLLocationManager()
@@ -20,7 +20,7 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	
 	
 	
-	var annotation: MKPointAnnotation?
+	let annotation = MKPointAnnotation()
 	var myLocation = CLLocation()
 	// set initial location in Honolulu
 	//let initialLocation = CLLocation(latitude: -37.8132, longitude: 144.963)
@@ -38,21 +38,29 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		let tapGesture = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
-		
-		
-		let artwork = Artwork(title: "SYD Tower",locationName: ("SYD Tower Buffet!!"),
-			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089))),phoneN: 0405558104)
-		
-		
-		resMap.addAnnotation(artwork)
-		
 		//=====================================
 		locationManager.delegate = self
 		locationManager.desiredAccuracy = kCLLocationAccuracyBest
 		locationManager.requestWhenInUseAuthorization()
 		locationManager.startUpdatingLocation()
 		//=========================================
+		
+		
+		self.resMap.delegate=self
+		annotation.title="SYD Tower"
+		annotation.subtitle="SYD Tower Buffet!!"
+		annotation.coordinate=CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089)))
+		let artwork = Artwork(title: "SYD Tower",locationName: ("SYD Tower Buffet!!"),
+			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089))),phoneN: 0405558104)
+		
+		let span = MKCoordinateSpanMake(0.003, 0.003)
+
+		let region = MKCoordinateRegionMake(annotation.coordinate, span)
+
+		resMap.setRegion(region, animated:true)
+		resMap.addAnnotation(annotation)
+		
+	
 		
 		
 		// For use in foreground
@@ -91,17 +99,19 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 		
 	}
 
+	func mapView(resMap: MKMapView, regionWillChangeAnimated animated: Bool) {
+		print(__FUNCTION__)
+	}
 	
-	
-	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
-		
+	func mapView(resMap: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		print("ssssssss")
 		if annotation is MKUserLocation {
 			return nil
 		}
 		
 		let reuseId = "pin"
 		
-		var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+		var pinView = resMap.dequeueReusableAnnotationViewWithIdentifier(reuseId)
 		if pinView == nil {
 			pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
 			pinView?.canShowCallout = true
@@ -120,7 +130,7 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	
 	func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 		if control == view.rightCalloutAccessoryView {
-			performSegueWithIdentifier("toTheMoon", sender: view)
+			performSegueWithIdentifier("ShowResDetailSegue", sender: view)
 		}
 	}
 	
