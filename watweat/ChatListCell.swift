@@ -11,4 +11,9 @@ import UIKit
 
 class ChatListCell: UITableViewCell {
 	
+	@IBOutlet weak var ChatRoomName: UILabel!
+	@IBOutlet weak var ChatContext: UILabel!
+
+
+	
 }

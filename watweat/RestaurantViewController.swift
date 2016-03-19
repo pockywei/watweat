@@ -13,19 +13,6 @@ import AddressBook
 
 class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	@IBOutlet weak var resMap: MKMapView!
-	@IBAction func BackButton(sender: AnyObject) {
-		let isPresentingInAddMealMode = presentingViewController is UINavigationController
-		print("1")
-		if isPresentingInAddMealMode {
-			print("2")
-			navigationController!.popViewControllerAnimated(true)
-		} else {
-			print("3")
-			dismissViewControllerAnimated(true, completion: nil)
-			
-		}
-
-	}
 	
 	let locationManager = CLLocationManager()
 	var annotation: MKPointAnnotation?

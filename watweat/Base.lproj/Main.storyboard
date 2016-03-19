@@ -82,7 +82,7 @@
             </objects>
             <point key="canvasLocation" x="6" y="437"/>
         </scene>
-        <!--Restaurant View Controller-->
+        <!--View The Restaurant Nearby-->
         <scene sceneID="i4f-Yo-hcP">
             <objects>
                 <viewController id="sBu-Ve-tm6" customClass="RestaurantViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppName_shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="qow-vb-z76">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qow-vb-z76">
                                 <rect key="frame" x="543" y="168" width="32" height="398"/>
                                 <color key="backgroundColor" red="0.91605997085571289" green="0.61110717058181763" blue="0.55320459604263306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -114,67 +114,51 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="restaurant map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-z5-tyg">
-                                <rect key="frame" x="25" y="120" width="550" height="40"/>
-                                <color key="backgroundColor" red="0.91605997085571289" green="0.61110717058181763" blue="0.55320459604263306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="Q06-WH-Qrl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.91605997085571289" green="0.61110717058181763" blue="0.55320459604263306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-3R-qA2">
                                 <rect key="frame" x="25" y="168" width="496" height="398"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="IbI-z5-tyg" secondAttribute="trailing" constant="5" id="Ald-ts-gww"/>
                             <constraint firstAttribute="trailing" secondItem="amt-Wj-gv1" secondAttribute="trailing" id="DPY-3l-HeD"/>
                             <constraint firstItem="0cl-3R-qA2" firstAttribute="height" secondItem="qow-vb-z76" secondAttribute="height" id="Ejv-Eh-Dqz"/>
                             <constraint firstItem="0cl-3R-qA2" firstAttribute="leading" secondItem="esH-bp-ayd" secondAttribute="leadingMargin" constant="5" id="LG5-r8-y7z"/>
-                            <constraint firstItem="IbI-z5-tyg" firstAttribute="leading" secondItem="esH-bp-ayd" secondAttribute="leadingMargin" constant="5" id="OYw-cx-dyy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qow-vb-z76" secondAttribute="trailing" constant="5" id="NpE-Pe-Dpc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qow-vb-z76" secondAttribute="trailing" constant="-8" id="U3J-mI-2VY"/>
                             <constraint firstItem="amt-Wj-gv1" firstAttribute="leading" secondItem="esH-bp-ayd" secondAttribute="leading" id="bDl-Ug-4Oa"/>
-                            <constraint firstItem="IbI-z5-tyg" firstAttribute="top" secondItem="amt-Wj-gv1" secondAttribute="bottom" constant="12" id="ced-dD-FOi"/>
-                            <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="IbI-z5-tyg" secondAttribute="bottom" constant="8" id="idU-5E-d9g"/>
                             <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="0cl-3R-qA2" secondAttribute="top" id="lEB-AL-dsV"/>
                             <constraint firstItem="qow-vb-z76" firstAttribute="leading" secondItem="0cl-3R-qA2" secondAttribute="trailing" constant="22" id="m0X-SH-M03"/>
-                            <constraint firstItem="qow-vb-z76" firstAttribute="trailing" secondItem="IbI-z5-tyg" secondAttribute="trailing" id="mKU-TS-Jcp"/>
+                            <constraint firstItem="0cl-3R-qA2" firstAttribute="top" secondItem="amt-Wj-gv1" secondAttribute="bottom" constant="60" id="mef-DY-1Kq"/>
                             <constraint firstItem="3C5-XC-ta0" firstAttribute="top" secondItem="0cl-3R-qA2" secondAttribute="bottom" constant="34" id="nD0-m6-rUl"/>
-                            <constraint firstItem="qow-vb-z76" firstAttribute="trailing" secondItem="IbI-z5-tyg" secondAttribute="trailing" id="nOw-pe-bP2"/>
                             <constraint firstItem="qow-vb-z76" firstAttribute="height" secondItem="0cl-3R-qA2" secondAttribute="height" id="o0L-b9-dgy"/>
-                            <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="IbI-z5-tyg" secondAttribute="bottom" constant="16" id="pIE-gb-HGB"/>
                             <constraint firstItem="qow-vb-z76" firstAttribute="height" secondItem="0cl-3R-qA2" secondAttribute="height" id="pQt-6t-9Vn"/>
                             <constraint firstItem="amt-Wj-gv1" firstAttribute="top" secondItem="7ry-8i-ga3" secondAttribute="bottom" id="y33-0m-b0O"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="amt-Wj-gv1" secondAttribute="bottom" constant="60" id="zZ0-Dy-5hu"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="U3J-mI-2VY"/>
-                                <exclude reference="nOw-pe-bP2"/>
                                 <exclude reference="o0L-b9-dgy"/>
-                                <exclude reference="pIE-gb-HGB"/>
                                 <exclude reference="pQt-6t-9Vn"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="dYF-DX-ty9">
-                        <barButtonItem key="leftBarButtonItem" title="back" id="DLB-7J-d5e">
+                    <navigationItem key="navigationItem" title="View The Restaurant Nearby" id="dYF-DX-ty9">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="DLB-7J-d5e"/>
+                        <barButtonItem key="rightBarButtonItem" title="chatroom" id="cji-KX-T8I">
                             <connections>
-                                <action selector="BackButton:" destination="sBu-Ve-tm6" id="8JM-5Q-Dio"/>
+                                <segue destination="Rd7-Wb-Xf1" kind="show" identifier="MapLeadToChatSeuge" id="OWb-UY-EeJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="resMap" destination="0cl-3R-qA2" id="nhU-dC-I6a"/>
-                        <segue destination="Rd7-Wb-Xf1" kind="showDetail" id="q3t-uU-siJ"/>
+                        <segue destination="eGL-JH-Zfa" kind="presentation" identifier="ShowResDetailSegue" id="XGJ-sD-gc8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gu2-za-UfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="437"/>
+            <point key="canvasLocation" x="992" y="479"/>
         </scene>
         <!--Resturant-->
         <scene sceneID="q10-Ff-w4c">
@@ -242,10 +226,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Resturant" id="f7d-Qs-0Qf" customClass="RestaurantViewContrller">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="Vux-oS-0yl"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="ws1-oM-7r1">
+                            <connections>
+                                <segue destination="Rd7-Wb-Xf1" kind="show" identifier="ResLeadToChatSeuge" id="POw-Bq-lOI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="I4G-F2-FZG" id="WVd-T1-dhV"/>
-                        <segue destination="Rd7-Wb-Xf1" kind="showDetail" identifier="ResLeadToChatSeuge" id="Tdy-Bz-3rV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9q-c6-GUA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -258,41 +246,43 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="914" y="1288"/>
+            <point key="canvasLocation" x="1076" y="1599"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Chat Room List Table View Controller-->
         <scene sceneID="A0v-dd-0lF">
             <objects>
-                <tableViewController id="n4i-pX-ZgL" sceneMemberID="viewController">
+                <tableViewController id="n4i-pX-ZgL" customClass="ChatRoomListTableViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="H7D-zE-o7M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="Yp3-qd-NXG" detailTextLabel="KJw-v7-phQ" style="IBUITableViewCellStyleValue1" id="oPn-cE-9sX" customClass="ChatListCell" customModule="watweat" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListCellid" textLabel="Yp3-qd-NXG" detailTextLabel="W0c-VY-aEy" style="IBUITableViewCellStyleSubtitle" id="oPn-cE-9sX" customClass="ChatListCell" customModule="watweat" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oPn-cE-9sX" id="fgR-xW-SHe">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yp3-qd-NXG">
-                                            <rect key="frame" x="15" y="12" width="31.5" height="19.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yp3-qd-NXG">
+                                            <rect key="frame" x="15" y="6" width="15.5" height="19.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KJw-v7-phQ">
-                                            <rect key="frame" x="529" y="12" width="56" height="19.5"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W0c-VY-aEy">
+                                            <rect key="frame" x="15" y="25.5" width="40.5" height="13.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="ChatContext" destination="W0c-VY-aEy" id="K6h-ZF-7SI"/>
+                                    <outlet property="ChatRoomName" destination="Yp3-qd-NXG" id="pkv-8T-8b2"/>
                                     <segue destination="Ivr-fB-IAP" kind="show" identifier="ChatSpecSegue" id="uNE-fn-3PK"/>
                                 </connections>
                             </tableViewCell>
@@ -302,16 +292,16 @@
                             <outlet property="delegate" destination="n4i-pX-ZgL" id="ThJ-rs-6Ay"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nap-HY-wwN"/>
+                    <navigationItem key="navigationItem" id="nap-HY-wwN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qn-Zn-CUC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2521" y="473"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Chat Room Table View Controller-->
         <scene sceneID="FYy-Km-mHR">
             <objects>
-                <tableViewController id="gqE-Wj-4VB" sceneMemberID="viewController">
+                <tableViewController id="gqE-Wj-4VB" customClass="ChatRoomTableViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vHG-Au-s72">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,7 +311,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4x7-Ic-b5k" id="G0N-Ip-6AF">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -331,7 +321,13 @@
                             <outlet property="delegate" destination="gqE-Wj-4VB" id="Och-cK-1aK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="2Lo-Zh-Bva"/>
+                    <navigationItem key="navigationItem" id="2Lo-Zh-Bva">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="Lba-eB-Ne7">
+                            <connections>
+                                <action selector="BackButton:" destination="gqE-Wj-4VB" id="sfD-dB-KPc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vfL-Nd-Pcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,13 +379,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c3K-PS-KJa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6" y="1288"/>
+            <point key="canvasLocation" x="209" y="1268"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AppName_shadow.png" width="700" height="600"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="q3t-uU-siJ"/>
+        <segue reference="OWb-UY-EeJ"/>
     </inferredMetricsTieBreakers>
 </document>
