@@ -1,5 +1,5 @@
 //
-//  MapViewController.swift
+//  ResMapViewController.swift
 //  watweat
 //
 //  Created by WEI on 16/3/19.
@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
+import MapKit
 
-class MapViewController:UIViewController{
+class ResMapViewController:UIViewController{
+	
+	
+	@IBOutlet weak var resMap: MKMapView!
 	
 }

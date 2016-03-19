@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xhM-0z-xuP">
-                                <rect key="frame" x="74" y="233" width="173" height="29"/>
+                                <rect key="frame" x="78" y="233" width="445" height="29"/>
                                 <segments>
                                     <segment title="Eater"/>
                                     <segment title="Owner"/>
@@ -27,7 +27,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nickname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bXe-I3-DCU">
-                                <rect key="frame" x="74" y="290" width="173" height="30"/>
+                                <rect key="frame" x="78" y="290" width="445" height="30"/>
                                 <color key="textColor" red="0.89777762062051281" green="0.84349298997359834" blue="0.39430570378542701" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -41,7 +41,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WhatwEat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn6-Bf-bRb">
-                                <rect key="frame" x="91" y="100" width="147" height="59"/>
+                                <rect key="frame" x="95" y="100" width="419" height="59"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,7 +63,10 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="OkButton" destination="e9Y-lE-VEz" id="wad-K4-Ytu"/>
+                        <segue destination="ekS-37-Aan" kind="show" identifier="loginSegue" id="0zQ-7M-96u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,12 +81,45 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="MLa-Df-aTD" kind="relationship" relationship="rootViewController" id="f0J-7s-s7C"/>
+                        <segue destination="sBu-Ve-tm6" kind="relationship" relationship="rootViewController" id="yPM-hp-FDC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a5-H3-e3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="429"/>
+        </scene>
+        <!--Restaurant View Controller-->
+        <scene sceneID="i4f-Yo-hcP">
+            <objects>
+                <viewController id="sBu-Ve-tm6" customClass="RestaurantViewController" customModule="watweat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7ry-8i-ga3"/>
+                        <viewControllerLayoutGuide type="bottom" id="3C5-XC-ta0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="esH-bp-ayd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-3R-qA2">
+                                <rect key="frame" x="0.0" y="182" width="600" height="418"/>
+                            </mapView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amt-Wj-gv1">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="a30-UY-zqq">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="wg8-3d-DVA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="resMap" destination="0cl-3R-qA2" id="nhU-dC-I6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gu2-za-UfJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="407"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EfS-G6-OPZ">
@@ -161,37 +197,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Wv-yu-fye" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1677" y="1523"/>
-        </scene>
-        <!--Map View Controller-->
-        <scene sceneID="iBT-s7-csx">
-            <objects>
-                <viewController id="MLa-Df-aTD" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Zyr-93-aeQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="7WS-xG-MUH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DVJ-b4-6wX">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Bx0-hk-7nU">
-                                <rect key="frame" x="20" y="125" width="537" height="455"/>
-                            </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-UP-ygK">
-                                <rect key="frame" x="565" y="125" width="24" height="455"/>
-                            </imageView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LfH-si-h74">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="8sk-AY-onl"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jQv-iu-hJy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1897" y="389"/>
         </scene>
     </scenes>
 </document>
