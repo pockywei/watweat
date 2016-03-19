@@ -14,11 +14,16 @@ import AddressBook
 class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	@IBOutlet weak var resMap: MKMapView!
 	
-	let locationManager = CLLocationManager()
+	var locationManager = CLLocationManager()
+	
+	
+	
+	
+	
 	var annotation: MKPointAnnotation?
 	var myLocation = CLLocation()
 	// set initial location in Honolulu
-	let initialLocation = CLLocation(latitude: -37.8132, longitude: 144.963)
+	//let initialLocation = CLLocation(latitude: -37.8132, longitude: 144.963)
 	let regionRadius: CLLocationDistance = 1000
 	func centerMapOnLocation(location: CLLocation) {
 	let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
@@ -32,16 +37,25 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		centerMapOnLocation(initialLocation)
-		let artwork = Artwork(title: "Your match location",locationName: ("Restaurant"),
-			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-37.8132)), longitude: Double((144.963))),phoneN: 0405558104)
+		
+		let tapGesture = UITapGestureRecognizer(target: self, action: Selector("handleTap:"))
+		
+		
+		let artwork = Artwork(title: "SYD Tower",locationName: ("SYD Tower Buffet!!"),
+			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089))),phoneN: 0405558104)
+		
 		
 		resMap.addAnnotation(artwork)
 		
-		self.locationManager.requestAlwaysAuthorization()
+		//=====================================
+		locationManager.delegate = self
+		locationManager.desiredAccuracy = kCLLocationAccuracyBest
+		locationManager.requestWhenInUseAuthorization()
+		locationManager.startUpdatingLocation()
+		//=========================================
+		
 		
 		// For use in foreground
-		self.locationManager.requestWhenInUseAuthorization()
 		
 		self.resMap.mapType = MKMapType.Standard
 		self.resMap.showsUserLocation = true
@@ -49,11 +63,7 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 		
 		
 		
-		if CLLocationManager.locationServicesEnabled() {
-			locationManager.delegate = self
-			locationManager.desiredAccuracy = kCLLocationAccuracyBest
-			locationManager.startUpdatingLocation()
-		}
+		
 		
 		
 		
@@ -70,21 +80,12 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
 	{
 		//let location = locations.last!
-		
-		let center = CLLocationCoordinate2D(latitude: myLocation.coordinate.latitude, longitude: myLocation.coordinate.longitude)
-		
-		//		print(location.coordinate.latitude)
-		//		print(location.coordinate)
-		
-		
-		let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
-		
-		
-		self.resMap.setRegion(region, animated: true)
-		
-		
-		// Add an annotation on Map View
-		
+		var coord = CLLocationCoordinate2D()
+		coord.longitude = locations[0].coordinate.longitude;
+		coord.latitude = locations[0].coordinate.latitude;
+		let initialLocation = CLLocation(latitude: coord.latitude, longitude: coord.longitude)
+		centerMapOnLocation(initialLocation)
+		print(coord.longitude)
 		//stop updating location to save battery life
 		locationManager.stopUpdatingLocation()
 		
@@ -92,8 +93,36 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 
 	
 	
+	func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+		
+		if annotation is MKUserLocation {
+			return nil
+		}
+		
+		let reuseId = "pin"
+		
+		var pinView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+		if pinView == nil {
+			pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+			pinView?.canShowCallout = true
+			
+			let rightButton: AnyObject! = UIButton(type: UIButtonType.DetailDisclosure)
+			rightButton.titleForState(UIControlState.Normal)
+			
+			pinView!.rightCalloutAccessoryView = rightButton as! UIView
+		}
+		else {
+			pinView?.annotation = annotation
+		}
+		
+		return pinView
+	}
 	
-	
+	func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+		if control == view.rightCalloutAccessoryView {
+			performSegueWithIdentifier("toTheMoon", sender: view)
+		}
+	}
 	
 	
 }
