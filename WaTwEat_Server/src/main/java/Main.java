@@ -7,11 +7,12 @@ import com.mashape.unirest.http.Unirest;
 import com.google.gson.Gson;
 
 
+import java.sql.*;
+
 import static spark.Spark.*;
 public class Main
 {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws SQLException, ClassNotFoundException, IllegalAccessException, InstantiationException {
         //Gson gson = new Gson();
         Log.setLogLevel(Log.DEBUG);
         Log.logInfo(Main.class, "Test Debugging Log");
@@ -19,8 +20,23 @@ public class Main
 
         controller.startServer();
 
+/*
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "root");
+
+        Statement st = con.createStatement();
+        String sql ;//= ("USE mydb;");
+        //ResultSet rs = st.executeQuery(sql);
+        sql = "SELECT * FROM Restaurant;";
+        ResultSet rs = st.executeQuery(sql);
+        if(rs.next()) {
+            int id = rs.getInt("idRestaurant");
+            String str1 = rs.getString("name");
+            System.out.println(" id => "+id+" str1 => "+str1);
+        }
 
 
+*/
 
 
 
