@@ -15,6 +15,7 @@ public class unitTest
     @Test
     public void sqlTest()
     {
+        System.out.println("(int) (System.currentTimeMillis() / 1000) =>" +(int) (System.currentTimeMillis() / 1000));
         Gson gson = new Gson();
         String dbSchema="mydb";
         String dbPORT="3306";

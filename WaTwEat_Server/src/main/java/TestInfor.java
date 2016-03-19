@@ -3,5 +3,14 @@
  */
 public class TestInfor
 {
-    public int[] id={1,2,3,4,5};
+    public String status = "Success";
+    TestInfor()
+    {
+
+    }
+
+    TestInfor(String status)
+    {
+        this.status = status;
+    }
 }
