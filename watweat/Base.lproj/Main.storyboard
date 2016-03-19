@@ -170,7 +170,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="10 are considering 12 decided to go   5 more to get discount" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="idP-uU-yKg">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="10 are considering 12 decided to go   5 more to get discount" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="idP-uU-yKg">
                                 <rect key="frame" x="307" y="157" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
