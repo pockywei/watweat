@@ -7,6 +7,6 @@ import java.util.Objects;
  */
 public class JsonData
 {
-    List<Restaurant> array = new ArrayList<Restaurant>();
+    List<Object> array = new ArrayList<Object>();
 
 }
