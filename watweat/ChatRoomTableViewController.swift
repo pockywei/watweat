@@ -32,5 +32,44 @@ class ChatRoomTableViewController:UITableViewController {
 		
 	}
 	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+	}
+	
+	
+	override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+		// Return the number of sections.
+		return 1
+	}
+	
+	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return 100
+	}
+	
+	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+		print("Decline_cell")
+		
+		
+		
+		let cell = tableView.dequeueReusableCellWithIdentifier("ChatListCellid", forIndexPath: indexPath) as! ChatListCell
+		
+		
+		//let chat_cell = Chatrooms[indexPath.row]
+		
+		
+				
+		
+		//		cell.Tournament.text = offer_cell.Tournament
+		//
+		//		cell.Offer_date.text = offer_cell.Match_date
+		
+		
+		return cell
+		
+		
+		
+	}
+	
 	
 }

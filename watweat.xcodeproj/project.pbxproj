@@ -14,6 +14,7 @@
 		B603287C1C9D2A67003CEA14 /* ChatRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */; };
 		B603287E1C9D3D1C003CEA14 /* chatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287D1C9D3D1C003CEA14 /* chatRoom.swift */; };
 		B60328801C9DAC60003CEA14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287F1C9DAC60003CEA14 /* User.swift */; };
+		B60328821C9DB6F7003CEA14 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328811C9DB6F7003CEA14 /* Client.swift */; };
 		B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FA1C9C1D57003001DC /* AppDelegate.swift */; };
 		B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FC1C9C1D57003001DC /* ViewController.swift */; };
 		B61A76001C9C1D57003001DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61A75FE1C9C1D57003001DC /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomTableViewController.swift; sourceTree = "<group>"; };
 		B603287D1C9D3D1C003CEA14 /* chatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatRoom.swift; sourceTree = "<group>"; };
 		B603287F1C9DAC60003CEA14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B60328811C9DB6F7003CEA14 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		B61A75F71C9C1D57003001DC /* watweat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watweat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61A75FA1C9C1D57003001DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61A75FC1C9C1D57003001DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				B603287B1C9D2A67003CEA14 /* ChatRoomTableViewController.swift */,
 				B603287D1C9D3D1C003CEA14 /* chatRoom.swift */,
 				B603287F1C9DAC60003CEA14 /* User.swift */,
+				B60328811C9DB6F7003CEA14 /* Client.swift */,
 			);
 			path = watweat;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */,
 				B603287E1C9D3D1C003CEA14 /* chatRoom.swift in Sources */,
+				B60328821C9DB6F7003CEA14 /* Client.swift in Sources */,
 				B60328781C9D2409003CEA14 /* ChatListCell.swift in Sources */,
 				B61A76341C9CD0FF003001DC /* ResdetailViewController.swift in Sources */,
 				B61A762E1C9CAF93003001DC /* RestaurantViewController.swift in Sources */,

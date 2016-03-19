@@ -25,6 +25,8 @@ class User{
 	
 	var ID : Int?
 	var name : String?
+	var roomId : [Int]?
+	var want_or_did : Bool?
 	
 	
 	
