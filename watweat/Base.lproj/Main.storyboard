@@ -110,8 +110,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="a30-UY-zqq">
-                        <barButtonItem key="leftBarButtonItem" title="back" id="wg8-3d-DVA"/>
+                    <navigationItem key="navigationItem" id="dYF-DX-ty9">
+                        <barButtonItem key="leftBarButtonItem" title="back" id="DLB-7J-d5e"/>
                     </navigationItem>
                     <connections>
                         <outlet property="resMap" destination="0cl-3R-qA2" id="nhU-dC-I6a"/>
