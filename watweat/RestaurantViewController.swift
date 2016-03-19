@@ -52,6 +52,7 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 		if CLLocationManager.locationServicesEnabled() {
 			locationManager.delegate = self
 			locationManager.desiredAccuracy = kCLLocationAccuracyBest
+			locationManager.requestWhenInUseAuthorization()
 			locationManager.startUpdatingLocation()
 		}
 		
@@ -61,6 +62,8 @@ class RestaurantViewController: UIViewController,CLLocationManagerDelegate {
 	}
 	
 	
+
+
 	
 	
 	func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
