@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DA37FF80ACA956FE933C14AA74FE1A75B639851A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "79EA0C4F360E98830418AFAE1A03A39D646B0106" : 0,
+    "DA37FF80ACA956FE933C14AA74FE1A75B639851A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "69BED0BF-F38A-4902-BDFA-E5945C570B92",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "79EA0C4F360E98830418AFAE1A03A39D646B0106" : "Alamofire-SwiftyJSON\/",
+    "DA37FF80ACA956FE933C14AA74FE1A75B639851A" : "watweat\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "watweat",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "watweat.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/SwiftyJSON\/Alamofire-SwiftyJSON.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "79EA0C4F360E98830418AFAE1A03A39D646B0106"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pockywei\/watweat.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA37FF80ACA956FE933C14AA74FE1A75B639851A"
+    }
+  ]
+}
