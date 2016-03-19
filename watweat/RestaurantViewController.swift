@@ -13,7 +13,7 @@ import AddressBook
 
 class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 	@IBOutlet weak var resMap: MKMapView!
-	
+	let user = User.sharedInstance
 	
 	var locationManager = CLLocationManager()
 	
@@ -36,8 +36,16 @@ class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationMan
 	
 	
 
+	@IBOutlet weak var chat_button: UIBarButtonItem!
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		if user.roomdic.isEmpty{
+			self.chat_button.enabled = false
+		}
+		else
+		{
+			self.chat_button.enabled = true
+		}
 		
 		//=====================================
 		locationManager.delegate = self
@@ -53,10 +61,10 @@ class RestaurantViewController: UIViewController,MKMapViewDelegate,CLLocationMan
 		
 		
 		let artwork = Artwork(title: "SYD Tower",locationName: ("SYD Tower Buffet!!"),
-			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089))),phoneN: 0405558104)
+			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8705)), longitude: Double((151.2089))),phoneN: 405558104)
 		
 		let artwork2 = Artwork(title: "SYD Imax",locationName: ("SYD Imax Ice-cream!!"),
-			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8730)), longitude: Double((151.2030))),phoneN: 0405558104)
+			discipline: "Sculpture",coordinate: CLLocationCoordinate2D(latitude: Double((-33.8730)), longitude: Double((151.2030))),phoneN: 405558105)
 		
 		
 		

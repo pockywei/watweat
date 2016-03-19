@@ -12,7 +12,7 @@ import UIKit
 
 class ChatRoomListTableViewController:UITableViewController {
 	
-	
+	let user = User.sharedInstance
 	
 	var Chatrooms = [chatRoom]()
 	
@@ -39,7 +39,21 @@ class ChatRoomListTableViewController:UITableViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		Chatrooms.append(chatRoom(chatroomname: "Hi",chatroomContext: "Melbourne Uni",chatroomID: 1))
+		
+		
+		
+		for (key,value) in user.roomdic{
+			
+			user.roomID?.append(key)
+			Chatrooms.append(chatRoom(chatroomname:value,chatroomContext: "Melbourne Uni",chatroomID: key))
+		
+		}
+			
+		
+		
+		
+		
+		
 		
 		
 		
@@ -84,6 +98,21 @@ class ChatRoomListTableViewController:UITableViewController {
 		return cell
 		
 		
+		
+	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if (segue.identifier == "ChatSpecSegue" )
+		{
+			let RestNavi = segue.destinationViewController as! UINavigationController
+			let createRes = RestNavi.topViewController as! ChatRoomTableViewController
+			//print(sender)
+			if let selectArt = sender as? Artwork {
+				createRes.art = selectArt
+				print(createRes.art)
+			}
+			
+		}
 		
 	}
 

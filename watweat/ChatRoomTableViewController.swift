@@ -15,6 +15,10 @@ import UIKit
 
 
 class ChatRoomTableViewController:UITableViewController {
+	let user = User.sharedInstance
+	let recordchat = chat_record.sharedInstance
+	var art : Artwork?
+	@IBOutlet weak var TextField: UITextField!
 	
 	@IBAction func BackButton(sender: AnyObject) {
 		let isPresentingInAddMealMode = presentingViewController is UINavigationController
@@ -35,6 +39,11 @@ class ChatRoomTableViewController:UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		user.cl = Client(id: 2,alias: "test1",considering: "C",artw:art!)
+		user.cl?.unread_message_request((art?.phoneNumber)!)
+		
+		
+		
 	}
 	
 	
@@ -44,7 +53,7 @@ class ChatRoomTableViewController:UITableViewController {
 	}
 	
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 100
+		return 15
 	}
 	
 	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -52,10 +61,10 @@ class ChatRoomTableViewController:UITableViewController {
 		
 		
 		
-		let cell = tableView.dequeueReusableCellWithIdentifier("ChatListCellid", forIndexPath: indexPath) as! ChatListCell
+		let cell = tableView.dequeueReusableCellWithIdentifier("chat_page", forIndexPath: indexPath) 
 		
 		
-		//let chat_cell = Chatrooms[indexPath.row]
+		let chat_cell = Chatrooms[indexPath.row]
 		
 		
 				

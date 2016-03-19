@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D2F068DAD8781D7300D7D2D /* Pods_watweat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410493E4A6E41E77C75D2CD8 /* Pods_watweat.framework */; };
 		B3800F171C9CA41F0047A85E /* assets in Resources */ = {isa = PBXBuildFile; fileRef = B3800F161C9CA41F0047A85E /* assets */; };
 		B3800F211C9D46820047A85E /* AppName_shadow_noBG.png in Resources */ = {isa = PBXBuildFile; fileRef = B3800F201C9D46820047A85E /* AppName_shadow_noBG.png */; };
 		B60328781C9D2409003CEA14 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328771C9D2409003CEA14 /* ChatListCell.swift */; };
@@ -15,6 +16,7 @@
 		B603287E1C9D3D1C003CEA14 /* chatRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287D1C9D3D1C003CEA14 /* chatRoom.swift */; };
 		B60328801C9DAC60003CEA14 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B603287F1C9DAC60003CEA14 /* User.swift */; };
 		B60328821C9DB6F7003CEA14 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328811C9DB6F7003CEA14 /* Client.swift */; };
+		B60328841C9DFBF2003CEA14 /* chat_record.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60328831C9DFBF2003CEA14 /* chat_record.swift */; };
 		B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FA1C9C1D57003001DC /* AppDelegate.swift */; };
 		B61A75FD1C9C1D57003001DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A75FC1C9C1D57003001DC /* ViewController.swift */; };
 		B61A76001C9C1D57003001DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B61A75FE1C9C1D57003001DC /* Main.storyboard */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		410493E4A6E41E77C75D2CD8 /* Pods_watweat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_watweat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA25DA6AA07AD0AE9D77F42C /* Pods-watweat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watweat.release.xcconfig"; path = "Pods/Target Support Files/Pods-watweat/Pods-watweat.release.xcconfig"; sourceTree = "<group>"; };
 		B3800F161C9CA41F0047A85E /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		B3800F201C9D46820047A85E /* AppName_shadow_noBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppName_shadow_noBG.png; sourceTree = "<group>"; };
 		B60328771C9D2409003CEA14 /* ChatListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
@@ -54,6 +58,7 @@
 		B603287D1C9D3D1C003CEA14 /* chatRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chatRoom.swift; sourceTree = "<group>"; };
 		B603287F1C9DAC60003CEA14 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B60328811C9DB6F7003CEA14 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		B60328831C9DFBF2003CEA14 /* chat_record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = chat_record.swift; sourceTree = "<group>"; };
 		B61A75F71C9C1D57003001DC /* watweat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = watweat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B61A75FA1C9C1D57003001DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B61A75FC1C9C1D57003001DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 		B61A762D1C9CAF93003001DC /* RestaurantViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		B61A76311C9CC742003001DC /* ArtWork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtWork.swift; sourceTree = "<group>"; };
 		B61A76331C9CD0FF003001DC /* ResdetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResdetailViewController.swift; sourceTree = "<group>"; };
+		CF698834C9BD2B12332A5D89 /* Pods-watweat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-watweat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-watweat/Pods-watweat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D2F068DAD8781D7300D7D2D /* Pods_watweat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03D7B85D8A578E9979166E96 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				410493E4A6E41E77C75D2CD8 /* Pods_watweat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04773544CFF62B3355249D3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF698834C9BD2B12332A5D89 /* Pods-watweat.debug.xcconfig */,
+				AA25DA6AA07AD0AE9D77F42C /* Pods-watweat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B61A75EE1C9C1D57003001DC = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +130,8 @@
 				B61A761C1C9C1D57003001DC /* watweatUITests */,
 				B61A75F81C9C1D57003001DC /* Products */,
 				B3800F161C9CA41F0047A85E /* assets */,
+				04773544CFF62B3355249D3C /* Pods */,
+				03D7B85D8A578E9979166E96 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +165,7 @@
 				B603287D1C9D3D1C003CEA14 /* chatRoom.swift */,
 				B603287F1C9DAC60003CEA14 /* User.swift */,
 				B60328811C9DB6F7003CEA14 /* Client.swift */,
+				B60328831C9DFBF2003CEA14 /* chat_record.swift */,
 			);
 			path = watweat;
 			sourceTree = "<group>";
@@ -168,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B61A76221C9C1D57003001DC /* Build configuration list for PBXNativeTarget "watweat" */;
 			buildPhases = (
+				FAE23DB839888BE076AD0455 /* Check Pods Manifest.lock */,
 				B61A75F31C9C1D57003001DC /* Sources */,
 				B61A75F41C9C1D57003001DC /* Frameworks */,
 				B61A75F51C9C1D57003001DC /* Resources */,
+				25A9E42306936B9815F796CC /* Embed Pods Frameworks */,
+				66DD887582388057A3513C01 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +322,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		25A9E42306936B9815F796CC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watweat/Pods-watweat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66DD887582388057A3513C01 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-watweat/Pods-watweat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAE23DB839888BE076AD0455 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B61A75F31C9C1D57003001DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -306,6 +384,7 @@
 				B61A76321C9CC742003001DC /* ArtWork.swift in Sources */,
 				B603287C1C9D2A67003CEA14 /* ChatRoomTableViewController.swift in Sources */,
 				B603287A1C9D2990003CEA14 /* ChatRoomListTableViewController.swift in Sources */,
+				B60328841C9DFBF2003CEA14 /* chat_record.swift in Sources */,
 				B61A76031C9C1D57003001DC /* watweat.xcdatamodeld in Sources */,
 				B61A75FB1C9C1D57003001DC /* AppDelegate.swift in Sources */,
 				B60328801C9DAC60003CEA14 /* User.swift in Sources */,
@@ -446,6 +525,7 @@
 		};
 		B61A76231C9C1D57003001DC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF698834C9BD2B12332A5D89 /* Pods-watweat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = watweat/Info.plist;
@@ -458,6 +538,7 @@
 		};
 		B61A76241C9C1D57003001DC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA25DA6AA07AD0AE9D77F42C /* Pods-watweat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = watweat/Info.plist;
