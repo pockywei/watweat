@@ -21,7 +21,7 @@ class Client {
         alias = "Xiao Fang"
     }
     
-    func sendRequest(url:NSURL, params:[String:AnyObject], method:Alamofire.Method) {
+    func sendRequest(url:NSURL, params:[String:AnyObject], method:Alamofire.Method){
         Alamofire.request(method, url, parameters: params)
             .responseSwiftyJSON({ (request, response, json, error) in
                 print(json)
@@ -31,5 +31,10 @@ class Client {
             })
     }
     
-    func going()
+    func going(restaurant_id: Int){
+        let parameters = ["idRestaurant":restaurant_id, "alias":alias]
+        let url = NSURL(string:"")
+        let respond:Alamofire.respond
+        sendRequest(url!, params:parameters, Alamofire.Method.POST)
+    }
 }

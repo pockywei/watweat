@@ -26,6 +26,9 @@ repositories {
 }
 
 dependencies {
+    compile 'com.mashape.unirest:unirest-java:1.4.6'
     compile 'com.sparkjava:spark-core:2.2'
     compile 'com.twilio.sdk:twilio-java-sdk:4.4.5'
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'com.google.code.gson:gson:2.2.4'
 }
