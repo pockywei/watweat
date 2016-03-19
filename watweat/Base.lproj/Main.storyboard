@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eGL-JH-Zfa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -94,18 +94,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-3R-qA2">
-                                <rect key="frame" x="0.0" y="182" width="600" height="418"/>
-                            </mapView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="amt-Wj-gv1">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="amt-Wj-gv1">
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ENA-vm-JwH"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppName_shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="qow-vb-z76">
+                                <rect key="frame" x="543" y="168" width="32" height="398"/>
+                                <color key="backgroundColor" red="0.91605997085571289" green="0.61110717058181763" blue="0.55320459604263306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="384" id="1mX-p9-0et"/>
+                                    <constraint firstAttribute="width" constant="32" id="MNi-GZ-nXD"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1mX-p9-0et"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="restaurant map" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbI-z5-tyg">
+                                <rect key="frame" x="25" y="120" width="550" height="40"/>
+                                <color key="backgroundColor" red="0.91605997085571289" green="0.61110717058181763" blue="0.55320459604263306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q06-WH-Qrl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.91605997085571289" green="0.61110717058181763" blue="0.55320459604263306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-3R-qA2">
+                                <rect key="frame" x="25" y="168" width="496" height="398"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="IbI-z5-tyg" secondAttribute="trailing" constant="5" id="Ald-ts-gww"/>
+                            <constraint firstAttribute="trailing" secondItem="amt-Wj-gv1" secondAttribute="trailing" id="DPY-3l-HeD"/>
+                            <constraint firstItem="0cl-3R-qA2" firstAttribute="height" secondItem="qow-vb-z76" secondAttribute="height" id="Ejv-Eh-Dqz"/>
+                            <constraint firstItem="0cl-3R-qA2" firstAttribute="leading" secondItem="esH-bp-ayd" secondAttribute="leadingMargin" constant="5" id="LG5-r8-y7z"/>
+                            <constraint firstItem="IbI-z5-tyg" firstAttribute="leading" secondItem="esH-bp-ayd" secondAttribute="leadingMargin" constant="5" id="OYw-cx-dyy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qow-vb-z76" secondAttribute="trailing" constant="-8" id="U3J-mI-2VY"/>
+                            <constraint firstItem="amt-Wj-gv1" firstAttribute="leading" secondItem="esH-bp-ayd" secondAttribute="leading" id="bDl-Ug-4Oa"/>
+                            <constraint firstItem="IbI-z5-tyg" firstAttribute="top" secondItem="amt-Wj-gv1" secondAttribute="bottom" constant="12" id="ced-dD-FOi"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="IbI-z5-tyg" secondAttribute="bottom" constant="8" id="idU-5E-d9g"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="0cl-3R-qA2" secondAttribute="top" id="lEB-AL-dsV"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="leading" secondItem="0cl-3R-qA2" secondAttribute="trailing" constant="22" id="m0X-SH-M03"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="trailing" secondItem="IbI-z5-tyg" secondAttribute="trailing" id="mKU-TS-Jcp"/>
+                            <constraint firstItem="3C5-XC-ta0" firstAttribute="top" secondItem="0cl-3R-qA2" secondAttribute="bottom" constant="34" id="nD0-m6-rUl"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="trailing" secondItem="IbI-z5-tyg" secondAttribute="trailing" id="nOw-pe-bP2"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="height" secondItem="0cl-3R-qA2" secondAttribute="height" id="o0L-b9-dgy"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="top" secondItem="IbI-z5-tyg" secondAttribute="bottom" constant="16" id="pIE-gb-HGB"/>
+                            <constraint firstItem="qow-vb-z76" firstAttribute="height" secondItem="0cl-3R-qA2" secondAttribute="height" id="pQt-6t-9Vn"/>
+                            <constraint firstItem="amt-Wj-gv1" firstAttribute="top" secondItem="7ry-8i-ga3" secondAttribute="bottom" id="y33-0m-b0O"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="U3J-mI-2VY"/>
+                                <exclude reference="nOw-pe-bP2"/>
+                                <exclude reference="o0L-b9-dgy"/>
+                                <exclude reference="pIE-gb-HGB"/>
+                                <exclude reference="pQt-6t-9Vn"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="dYF-DX-ty9">
-                        <barButtonItem key="leftBarButtonItem" title="back" id="DLB-7J-d5e"/>
+                        <barButtonItem key="leftBarButtonItem" title="back" id="DLB-7J-d5e">
+                            <connections>
+                                <action selector="BackButton:" destination="sBu-Ve-tm6" id="8JM-5Q-Dio"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="resMap" destination="0cl-3R-qA2" id="nhU-dC-I6a"/>
@@ -215,4 +275,7 @@
             <point key="canvasLocation" x="522" y="1336"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AppName_shadow.png" width="700" height="600"/>
+    </resources>
 </document>
