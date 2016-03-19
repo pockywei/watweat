@@ -70,6 +70,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="test.png" width="320" height="160"/>
+        <image name="test.png" width="480" height="480"/>
     </resources>
 </document>
