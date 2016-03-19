@@ -7,11 +7,30 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
+        
+        let client = Client()
+        var url = NSURL(string:"http://10.0.7.25:4567/restaurant_chat")
+        var parameters : [String:AnyObject]?
+        parameters = ["alias":client.alias, "id":client.id, "idRestaurant":1]
+        if parameters==nil{
+            parameters = ["":NSNull()]
+        }
+        
+        if let para = parameters{
+            client.sendRequest(url!,params: parameters!, method: Alamofire.Method.POST)
+        }
+        else
+            
+        {
+            
+            print("NO PARAMETER")
+        }
 		// Do any additional setup after loading the view, typically from a nib.
 	}
 
